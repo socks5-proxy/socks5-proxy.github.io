@@ -140,6 +140,47 @@
             transform: translateY(-2px);
         }
         
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .pagination button {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #667eea;
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination button:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .pagination button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .pagination button:disabled {
+            background: #ccc;
+            color: #666;
+            cursor: not-allowed;
+        }
+        
+        .page-info {
+            margin: 0 1rem;
+            color: white;
+            font-weight: bold;
+        }
+        
         .back-link {
             display: block;
             text-align: center;
@@ -162,6 +203,14 @@
             h1 {
                 font-size: 1.5rem;
             }
+            
+            .pagination {
+                flex-direction: column;
+            }
+            
+            .page-info {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
@@ -182,7 +231,7 @@
         </div>
         
         <div class="proxy-table">
-            <table>
+            <table id="proxyTable">
                 <thead>
                     <tr>
                         <th>协议</th>
@@ -192,232 +241,201 @@
                         <th>操作</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.135</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.135:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.136</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.136:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.138</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.138:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.139</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.139:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.140</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.140:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.141</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.141:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.142</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.142:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.143</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.143:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.147</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.147:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.148</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.148:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.149</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.149:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.150</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.150:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.153</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.153:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.157</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.157:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.195</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.195:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.197</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.197:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.199</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.199:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.201</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.201:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.202</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.202:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">107.172.94.203</td>
-                        <td class="port">9050</td>
-                        <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.203:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">176.142.245.127</td>
-                        <td class="port">9050</td>
-                        <td class="location" style="color: green; font-weight: bold;">[家宽] 美国 佛罗里达州 迈阿密</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://176.142.245.127:9050 [[家宽] 美国 佛罗里达州 迈阿密]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">188.242.11.249</td>
-                        <td class="port">9068</td>
-                        <td class="location">[机房] 德国</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://188.242.11.249:9068 [[机房] 德国]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">198.204.232.162</td>
-                        <td class="port">602</td>
-                        <td class="location" style="color: green; font-weight: bold;">[家宽] 美国 佛罗里达州</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://198.204.232.162:602 [[家宽] 美国 佛罗里达州]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">213.142.133.192</td>
-                        <td class="port">444</td>
-                        <td class="location">[机房] 土耳其 伊斯坦布尔 伊斯坦布尔</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://213.142.133.192:444 [[机房] 土耳其 伊斯坦布尔 伊斯坦布尔]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">31.59.58.227</td>
-                        <td class="port">444</td>
-                        <td class="location">[机房] 德国 黑森州 法兰克福</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://31.59.58.227:444 [[机房] 德国 黑森州 法兰克福]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">38.60.223.178</td>
-                        <td class="port">8899</td>
-                        <td class="location">[机房] 德国 黑森州 法兰克福</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://38.60.223.178:8899 [[机房] 德国 黑森州 法兰克福]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">5.83.140.103</td>
-                        <td class="port">444</td>
-                        <td class="location">[机房] 荷兰 格尔德兰省</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://5.83.140.103:444 [[机房] 荷兰 格尔德兰省]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">70.36.108.196</td>
-                        <td class="port">1000</td>
-                        <td class="location" style="color: green; font-weight: bold;">[家宽] 美国 伊利诺伊州 芝加哥</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://70.36.108.196:1000 [[家宽] 美国 伊利诺伊州 芝加哥]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">77.232.142.73</td>
-                        <td class="port">12001</td>
-                        <td class="location">[机房] 荷兰 弗莱福兰省 莱利斯塔德</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://77.232.142.73:12001 [[机房] 荷兰 弗莱福兰省 莱利斯塔德]')">复制</button></td>
-                    </tr>
-                    <tr>
-                        <td class="protocol">socks5</td>
-                        <td class="ip">93.123.178.135</td>
-                        <td class="port">7689</td>
-                        <td class="location">[机房] 德国</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://93.123.178.135:7689 [[机房] 德国]')">复制</button></td>
-                    </tr>
+                <tbody id="proxyTableBody">
+                    <!-- 代理数据将通过JavaScript动态加载 -->
                 </tbody>
             </table>
         </div>
         
-        <a href="index.html" class="back-link">← 返回首页</a>
+        <div class="pagination" id="pagination">
+            <!-- 分页控件将通过JavaScript动态生成 -->
+        </div>
         
-        <script>
-            function copyProxy(proxy) {
-                navigator.clipboard.writeText(proxy).then(function() {
-                    alert('代理已复制到剪贴板: ' + proxy);
-                }).catch(function(err) {
-                    console.error('复制失败: ', err);
-                });
-            }
-        </script>
+        <a href="index.html" class="back-link">← 返回首页</a>
     </div>
+    
+    <script>
+        // 所有代理数据
+        const allProxies = [
+            "socks5://107.172.94.135:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.136:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.138:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.139:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.140:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.141:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.142:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.143:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.147:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.148:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.149:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.150:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.153:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.157:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.195:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.197:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.199:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.201:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.202:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.203:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://176.142.245.127:9050 [[家宽] 美国 佛罗里达州 迈阿密]",
+            "socks5://188.242.11.249:9068 [[机房] 德国]",
+            "socks5://198.204.232.162:602 [[家宽] 美国 佛罗里达州]",
+            "socks5://213.142.133.192:444 [[机房] 土耳其 伊斯坦布尔 伊斯坦布尔]",
+            "socks5://31.59.58.227:444 [[机房] 德国 黑森州 法兰克福]",
+            "socks5://38.60.223.178:8899 [[机房] 德国 黑森州 法兰克福]",
+            "socks5://5.83.140.103:444 [[机房] 荷兰 格尔德兰省]",
+            "socks5://70.36.108.196:1000 [[家宽] 美国 伊利诺伊州 芝加哥]",
+            "socks5://77.232.142.73:12001 [[机房] 荷兰 弗莱福兰省 莱利斯塔德]",
+            "socks5://93.123.178.135:7689 [[机房] 德国]",
+        ];
+        
+        // 每页显示的代理数量
+        const proxiesPerPage = 10;
+        // 当前页码（从0开始）
+        let currentPage = 0;
+        
+        // 解析代理信息
+        function parseProxy(proxyLine) {
+            try {
+                // 分离协议和后面的部分
+                if (proxyLine.includes('://')) {
+                    const protocolPart = proxyLine.split('://')[0];
+                    const rest = proxyLine.split('://')[1];
+                    
+                    // 分离IP端口和位置
+                    if (rest.includes(' [') && rest.endsWith(']')) {
+                        const ipPortPart = rest.split(' [')[0];
+                        const location = rest.split(' [')[1].slice(0, -1); // 去掉结尾的]
+                        
+                        // 分离IP和端口
+                        const lastColonIndex = ipPortPart.lastIndexOf(':');
+                        if (lastColonIndex > 0) {
+                            const ip = ipPortPart.substring(0, lastColonIndex);
+                            const port = ipPortPart.substring(lastColonIndex + 1);
+                            return { protocol: protocolPart, ip: ip, port: port, location: location };
+                        } else {
+                            return { protocol: protocolPart, ip: ipPortPart, port: "未知", location: location };
+                        }
+                    } else {
+                        // 分离IP和端口
+                        const lastColonIndex = rest.lastIndexOf(':');
+                        if (lastColonIndex > 0) {
+                            const ip = rest.substring(0, lastColonIndex);
+                            const port = rest.substring(lastColonIndex + 1);
+                            return { protocol: protocolPart, ip: ip, port: port, location: "未知" };
+                        } else {
+                            return { protocol: protocolPart, ip: rest, port: "未知", location: "未知" };
+                        }
+                    }
+                } else {
+                    // 处理格式不正确的行
+                    return { protocol: "", ip: proxyLine, port: "", location: "" };
+                }
+            } catch (e) {
+                // 处理解析错误
+                return { protocol: "", ip: proxyLine, port: "", location: "" };
+            }
+        }
+        
+        // 渲染表格数据
+        function renderTable() {
+            const tbody = document.getElementById('proxyTableBody');
+            tbody.innerHTML = '';
+            
+            const startIndex = currentPage * proxiesPerPage;
+            const endIndex = Math.min(startIndex + proxiesPerPage, allProxies.length);
+            const pageProxies = allProxies.slice(startIndex, endIndex);
+            
+            pageProxies.forEach(proxyLine => {
+                const proxy = parseProxy(proxyLine);
+                const locationStyle = proxy.location.includes('家宽') ? ' style="color: green; font-weight: bold;"' : '';
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="protocol">${proxy.protocol}</td>
+                    <td class="ip">${proxy.ip}</td>
+                    <td class="port">${proxy.port}</td>
+                    <td class="location"${locationStyle}>${proxy.location}</td>
+                    <td><button class="copy-btn" onclick="copyProxy('${proxyLine.replace(/'/g, "\'")}')">复制</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+        
+        // 渲染分页控件
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            const totalPages = Math.ceil(allProxies.length / proxiesPerPage);
+            
+            // 上一页按钮
+            const prevButton = document.createElement('button');
+            prevButton.textContent = '上一页';
+            prevButton.disabled = currentPage === 0;
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    updatePage();
+                }
+            });
+            pagination.appendChild(prevButton);
+            
+            // 页码信息
+            const pageInfo = document.createElement('div');
+            pageInfo.className = 'page-info';
+            pageInfo.textContent = `第 ${currentPage + 1} 页，共 ${totalPages} 页`;
+            pagination.appendChild(pageInfo);
+            
+            // 下一页按钮
+            const nextButton = document.createElement('button');
+            nextButton.textContent = '下一页';
+            nextButton.disabled = currentPage >= totalPages - 1;
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    updatePage();
+                }
+            });
+            pagination.appendChild(nextButton);
+            
+            // 页码按钮（最多显示10个页码）
+            const startPage = Math.max(0, Math.min(currentPage - 5, totalPages - 10));
+            const endPage = Math.min(totalPages, startPage + 10);
+            
+            for (let i = startPage; i < endPage; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i + 1;
+                if (i === currentPage) {
+                    pageButton.classList.add('active');
+                }
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    updatePage();
+                });
+                pagination.appendChild(pageButton);
+            }
+        }
+        
+        // 更新页面显示
+        function updatePage() {
+            renderTable();
+            renderPagination();
+        }
+        
+        // 复制代理到剪贴板
+        function copyProxy(proxy) {
+            navigator.clipboard.writeText(proxy).then(function() {
+                alert('代理已复制到剪贴板: ' + proxy);
+            }).catch(function(err) {
+                console.error('复制失败: ', err);
+            });
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePage();
+        });
+    </script>
 </body>
 </html>
