@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Sitemap: https://socks5-proxy.github.io/sitemap.xml
+
+# 允许搜索引擎抓取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
