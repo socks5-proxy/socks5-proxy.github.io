@@ -225,6 +225,10 @@
             transform: translateY(-2px);
         }
         
+        .copy-btn.copied {
+            background: #27ae60;
+        }
+        
         .footer {
             text-align: center;
             color: white;
@@ -241,6 +245,27 @@
         
         .footer a:hover {
             text-decoration: underline;
+        }
+        
+        #copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-weight: bold;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+        }
+        
+        #copy-notification.show {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         @keyframes fadeIn {
@@ -331,210 +356,210 @@
                         <td class="ip">70.36.108.196</td>
                         <td class="port">1000</td>
                         <td class="location" style="color: green; font-weight: bold;">[家宽] 美国 伊利诺伊州 芝加哥</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://70.36.108.196:1000 [[家宽] 美国 伊利诺伊州 芝加哥]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://70.36.108.196:1000 [[家宽] 美国 伊利诺伊州 芝加哥]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">198.204.232.162</td>
                         <td class="port">602</td>
                         <td class="location" style="color: green; font-weight: bold;">[家宽] 美国 佛罗里达州</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://198.204.232.162:602 [[家宽] 美国 佛罗里达州]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://198.204.232.162:602 [[家宽] 美国 佛罗里达州]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">5.83.140.103</td>
                         <td class="port">444</td>
                         <td class="location">[机房] 荷兰 格尔德兰省</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://5.83.140.103:444 [[机房] 荷兰 格尔德兰省]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://5.83.140.103:444 [[机房] 荷兰 格尔德兰省]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">31.59.58.227</td>
                         <td class="port">444</td>
                         <td class="location">[机房] 德国 黑森州 法兰克福</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://31.59.58.227:444 [[机房] 德国 黑森州 法兰克福]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://31.59.58.227:444 [[机房] 德国 黑森州 法兰克福]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">213.142.133.192</td>
                         <td class="port">444</td>
                         <td class="location">[机房] 土耳其 伊斯坦布尔 伊斯坦布尔</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://213.142.133.192:444 [[机房] 土耳其 伊斯坦布尔 伊斯坦布尔]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://213.142.133.192:444 [[机房] 土耳其 伊斯坦布尔 伊斯坦布尔]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">176.142.245.127</td>
                         <td class="port">9050</td>
                         <td class="location" style="color: green; font-weight: bold;">[家宽] 美国 佛罗里达州 迈阿密</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://176.142.245.127:9050 [[家宽] 美国 佛罗里达州 迈阿密]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://176.142.245.127:9050 [[家宽] 美国 佛罗里达州 迈阿密]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">93.123.178.135</td>
                         <td class="port">7689</td>
                         <td class="location">[机房] 德国</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://93.123.178.135:7689 [[机房] 德国]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://93.123.178.135:7689 [[机房] 德国]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">77.232.142.73</td>
                         <td class="port">12001</td>
                         <td class="location">[机房] 荷兰 弗莱福兰省 莱利斯塔德</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://77.232.142.73:12001 [[机房] 荷兰 弗莱福兰省 莱利斯塔德]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://77.232.142.73:12001 [[机房] 荷兰 弗莱福兰省 莱利斯塔德]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">38.60.223.178</td>
                         <td class="port">8899</td>
                         <td class="location">[机房] 德国 黑森州 法兰克福</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://38.60.223.178:8899 [[机房] 德国 黑森州 法兰克福]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://38.60.223.178:8899 [[机房] 德国 黑森州 法兰克福]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">188.242.11.249</td>
                         <td class="port">9068</td>
                         <td class="location">[机房] 德国</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://188.242.11.249:9068 [[机房] 德国]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://188.242.11.249:9068 [[机房] 德国]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.197</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.197:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.197:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.203</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.203:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.203:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.150</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.150:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.150:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.157</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.157:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.157:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.153</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.153:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.153:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.195</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.195:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.195:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.202</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.202:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.202:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.199</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.199:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.199:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.201</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.201:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.201:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.149</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.149:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.149:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.147</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.147:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.147:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.148</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.148:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.148:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.142</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.142:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.142:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.141</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.141:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.141:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.143</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.143:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.143:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.136</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.136:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.136:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.140</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.140:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.140:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.138</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.138:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.138:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.139</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.139:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.139:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                     <tr>
                         <td class="protocol">socks5</td>
                         <td class="ip">107.172.94.135</td>
                         <td class="port">9050</td>
                         <td class="location">[机房] 加拿大 魁北克省 博阿努瓦 — OVH</td>
-                        <td><button class="copy-btn" onclick="copyProxy('socks5://107.172.94.135:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://107.172.94.135:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]')">复制</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -568,17 +593,34 @@
         
         <div class="footer">
             代理资源抓取于 公共代理池网站：<a href="https://tomcat1235.nyc.mn" target="_blank" rel="nofollow noopener">https://tomcat1235.nyc.mn</a><br>
-            最后更新时间: <time datetime="2025-10-26T01:18:30.370295">2025-10-26 01:18:30</time><br>
+            最后更新时间: <time datetime="2025-10-26T01:24:53.816145">2025-10-26 01:24:53</time><br>
             <a href="/sitemap.xml">网站地图</a> | <a href="allproxy.html" target="_blank">历史代理</a>
         </div>
+        
+        <div id="copy-notification">已复制到剪贴板！</div>
     </div>
     
     <script>
-        function copyProxy(proxy) {
+        function copyProxy(button, proxy) {
             navigator.clipboard.writeText(proxy).then(function() {
-                console.log('代理已复制: ' + proxy);
+                // 显示视觉反馈
+                const originalText = button.textContent;
+                button.textContent = '已复制';
+                button.classList.add('copied');
+                
+                // 显示通知
+                const notification = document.getElementById('copy-notification');
+                notification.classList.add('show');
+                
+                // 3秒后恢复原状
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                    notification.classList.remove('show');
+                }, 3000);
             }).catch(function(err) {
                 console.error('复制失败: ', err);
+                alert('复制失败，请手动复制: ' + proxy);
             });
         }
         
