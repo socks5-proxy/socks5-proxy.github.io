@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> - socks5-http-socks5</title>
+    <title>所有历史代理记录 - socks5代理-http代理-免费socks5代理服务器列表</title>
     <style>
         * {
             margin: 0;
@@ -242,15 +242,15 @@
 <body>
     <div class="container">
         <header>
-            <h1> </h1>
-            <p class="subtitle"></p>
+            <h1>🌐 所有历史代理记录</h1>
+            <p class="subtitle">累计收集的免费代理服务器列表</p>
         </header>
         
         <div class="stats">
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-number">30</div>
-                    <div class="stat-label"></div>
+                    <div class="stat-label">历史代理总数</div>
                 </div>
             </div>
         </div>
@@ -259,112 +259,112 @@
             <table id="proxyTable">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>IP </th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>协议</th>
+                        <th>IP 地址</th>
+                        <th>端口</th>
+                        <th>位置</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody id="proxyTableBody">
-                    <!-- JavaScript -->
+                    <!-- 代理数据将通过JavaScript动态加载 -->
                 </tbody>
             </table>
         </div>
         
         <div class="pagination" id="pagination">
-            <!-- JavaScript -->
+            <!-- 分页控件将通过JavaScript动态生成 -->
         </div>
         
-        <div id="copy-notification"></div>
+        <div id="copy-notification">已复制到剪贴板！</div>
         
-        <a href="index.html" class="back-link"> </a>
+        <a href="index.html" class="back-link">← 返回首页</a>
     </div>
     
     <script>
-        // 
+        // 所有代理数据（最新的在前）
         const allProxies = [
-            "socks5://93.123.178.135:7689 [[机房] 德国 复制 已复制]",
-            "socks5://77.232.142.73:12001 [[机房] 荷兰 弗莱福兰省 莱利斯塔德 复制 已复制]",
-            "socks5://70.36.108.196:1000 [[家宽] 美国 伊利诺伊州 芝加哥 复制 已复制]",
-            "socks5://5.83.140.103:444 [[机房] 荷兰 格尔德兰省 复制 已复制]",
-            "socks5://38.60.223.178:8899 [[机房] 德国 黑森州 法兰克福 复制 已复制]",
-            "socks5://31.59.58.227:444 [[机房] 德国 黑森州 法兰克福 复制 已复制]",
-            "socks5://213.142.133.192:444 [[机房] 土耳其 伊斯坦布尔 伊斯坦布尔 复制 已复制]",
-            "socks5://198.204.232.162:602 [[家宽] 美国 佛罗里达州 复制 已复制]",
-            "socks5://188.242.11.249:9068 [[机房] 德国 复制 已复制]",
-            "socks5://176.142.245.127:9050 [[家宽] 美国 佛罗里达州 迈阿密 复制 已复制]",
-            "socks5://107.172.94.203:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.202:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.201:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.199:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.197:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.195:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.157:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.153:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.150:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.149:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.148:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.147:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.143:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.142:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.141:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.140:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.139:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.138:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.136:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
-            "socks5://107.172.94.135:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH 复制 已复制]",
+            "socks5://93.123.178.135:7689 [[机房] 德国]",
+            "socks5://77.232.142.73:12001 [[机房] 荷兰 弗莱福兰省 莱利斯塔德]",
+            "socks5://70.36.108.196:1000 [[家宽] 美国 伊利诺伊州 芝加哥]",
+            "socks5://5.83.140.103:444 [[机房] 荷兰 格尔德兰省]",
+            "socks5://38.60.223.178:8899 [[机房] 德国 黑森州 法兰克福]",
+            "socks5://31.59.58.227:444 [[机房] 德国 黑森州 法兰克福]",
+            "socks5://213.142.133.192:444 [[机房] 土耳其 伊斯坦布尔 伊斯坦布尔]",
+            "socks5://198.204.232.162:602 [[家宽] 美国 佛罗里达州]",
+            "socks5://188.242.11.249:9068 [[机房] 德国]",
+            "socks5://176.142.245.127:9050 [[家宽] 美国 佛罗里达州 迈阿密]",
+            "socks5://107.172.94.203:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.202:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.201:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.199:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.197:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.195:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.157:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.153:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.150:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.149:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.148:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.147:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.143:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.142:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.141:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.140:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.139:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.138:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.136:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
+            "socks5://107.172.94.135:9050 [[机房] 加拿大 魁北克省 博阿努瓦 — OVH]",
         ];
         
-        // 
+        // 每页显示的代理数量
         const proxiesPerPage = 10;
-        // 0
+        // 当前页码（从0开始）
         let currentPage = 0;
         
-        // 
+        // 解析代理信息
         function parseProxy(proxyLine) {
             try {
-                // 
+                // 分离协议和后面的部分
                 if (proxyLine.includes('://')) {
                     const protocolPart = proxyLine.split('://')[0];
                     const rest = proxyLine.split('://')[1];
                     
-                    // IP
+                    // 分离IP端口和位置
                     if (rest.includes(' [') && rest.endsWith(']')) {
                         const ipPortPart = rest.split(' [')[0];
-                        const location = rest.split(' [')[1].slice(0, -1); // ]
+                        const location = rest.split(' [')[1].slice(0, -1); // 去掉结尾的]
                         
-                        // IP
+                        // 分离IP和端口
                         const lastColonIndex = ipPortPart.lastIndexOf(':');
                         if (lastColonIndex > 0) {
                             const ip = ipPortPart.substring(0, lastColonIndex);
                             const port = ipPortPart.substring(lastColonIndex + 1);
                             return { protocol: protocolPart, ip: ip, port: port, location: location };
                         } else {
-                            return { protocol: protocolPart, ip: ipPortPart, port: "", location: location };
+                            return { protocol: protocolPart, ip: ipPortPart, port: "未知", location: location };
                         }
                     } else {
-                        // IP
+                        // 分离IP和端口
                         const lastColonIndex = rest.lastIndexOf(':');
                         if (lastColonIndex > 0) {
                             const ip = rest.substring(0, lastColonIndex);
                             const port = rest.substring(lastColonIndex + 1);
-                            return { protocol: protocolPart, ip: ip, port: port, location: "" };
+                            return { protocol: protocolPart, ip: ip, port: port, location: "未知" };
                         } else {
-                            return { protocol: protocolPart, ip: rest, port: "", location: "" };
+                            return { protocol: protocolPart, ip: rest, port: "未知", location: "未知" };
                         }
                     }
                 } else {
-                    // 
+                    // 处理格式不正确的行
                     return { protocol: "", ip: proxyLine, port: "", location: "" };
                 }
             } catch (e) {
-                // 
+                // 处理解析错误
                 return { protocol: "", ip: proxyLine, port: "", location: "" };
             }
         }
         
-        // 
+        // 渲染表格数据
         function renderTable() {
             const tbody = document.getElementById('proxyTableBody');
             tbody.innerHTML = '';
@@ -375,7 +375,7 @@
             
             pageProxies.forEach(proxyLine => {
                 const proxy = parseProxy(proxyLine);
-                const locationStyle = proxy.location.includes('') ? ' style="color: green; font-weight: bold;"' : '';
+                const locationStyle = proxy.location.includes('家宽') ? ' style="color: green; font-weight: bold;"' : '';
                 
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -383,22 +383,22 @@
                     <td class="ip">${proxy.ip}</td>
                     <td class="port">${proxy.port}</td>
                     <td class="location"${locationStyle}>${proxy.location}</td>
-                    <td><button class="copy-btn" onclick="copyProxy(this, '${proxyLine.replace(/'/g, "\'")}')"></button></td>
+                    <td><button class="copy-btn" onclick="copyProxy(this, '${proxyLine.replace(/'/g, "\'")}')">复制</button></td>
                 `;
                 tbody.appendChild(row);
             });
         }
         
-        // 
+        // 渲染分页控件
         function renderPagination() {
             const pagination = document.getElementById('pagination');
             pagination.innerHTML = '';
             
             const totalPages = Math.ceil(allProxies.length / proxiesPerPage);
             
-            // 
+            // 上一页按钮
             const prevButton = document.createElement('button');
-            prevButton.textContent = '';
+            prevButton.textContent = '上一页';
             prevButton.disabled = currentPage === 0;
             prevButton.addEventListener('click', () => {
                 if (currentPage > 0) {
@@ -408,15 +408,15 @@
             });
             pagination.appendChild(prevButton);
             
-            // 
+            // 页码信息
             const pageInfo = document.createElement('div');
             pageInfo.className = 'page-info';
-            pageInfo.textContent = ` ${currentPage + 1}  ${totalPages} `;
+            pageInfo.textContent = `第 ${currentPage + 1} 页，共 ${totalPages} 页`;
             pagination.appendChild(pageInfo);
             
-            // 
+            // 下一页按钮
             const nextButton = document.createElement('button');
-            nextButton.textContent = '';
+            nextButton.textContent = '下一页';
             nextButton.disabled = currentPage >= totalPages - 1;
             nextButton.addEventListener('click', () => {
                 if (currentPage < totalPages - 1) {
@@ -426,7 +426,7 @@
             });
             pagination.appendChild(nextButton);
             
-            // 10
+            // 页码按钮（最多显示10个页码）
             const startPage = Math.max(0, Math.min(currentPage - 5, totalPages - 10));
             const endPage = Math.min(totalPages, startPage + 10);
             
@@ -444,37 +444,37 @@
             }
         }
         
-        // 
+        // 更新页面显示
         function updatePage() {
             renderTable();
             renderPagination();
         }
         
-        // 
+        // 复制代理到剪贴板
         function copyProxy(button, proxy) {
             navigator.clipboard.writeText(proxy).then(function() {
-                // 
+                // 显示视觉反馈
                 const originalText = button.textContent;
-                button.textContent = '';
+                button.textContent = '已复制';
                 button.classList.add('copied');
                 
-                // 
+                // 显示通知
                 const notification = document.getElementById('copy-notification');
                 notification.classList.add('show');
                 
-                // 3
+                // 3秒后恢复原状
                 setTimeout(function() {
                     button.textContent = originalText;
                     button.classList.remove('copied');
                     notification.classList.remove('show');
                 }, 3000);
             }).catch(function(err) {
-                console.error(': ', err);
-                alert(': ' + proxy);
+                console.error('复制失败: ', err);
+                alert('复制失败，请手动复制: ' + proxy);
             });
         }
         
-        // 
+        // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', function() {
             updatePage();
         });
