@@ -1,9 +1,11 @@
-# 代理列表更新时间: 2025-11-03 09:30:04
+# 代理列表更新时间: 2025-11-03 23:00:04
 # 总计: 30 个代理
 
-socks5://185.123.53.225:30000 [[机房] 西班牙 巴利亚里群岛 [PROPHASE ELECTRONICS S.L. - CLIENTES]]
+socks5://176.215.11.52:80 [[机房] 俄罗斯 斯维尔德洛夫斯克州 叶卡捷琳堡 [JSC "ER-Telecom Holding" Yekaterinburg Branch]]
+socks5://45.120.178.66:8080 [[机房] 荷兰 弗莱福兰省 莱利斯塔德 [WorkTitans B.V.]]
+socks5://185.123.53.225:30000 [[家宽] 西班牙 巴利亚里群岛 [PROPHASE ELECTRONICS S.L. - CLIENTES]]
 socks5://185.241.43.247:30000 [[机房] 中国 香港 香港 [BAGE CLOUD LLC]]
-socks5://175.182.175.106:30000 [[机房] 中国 台湾 台北市 [New Century InfoComm Tech. Co., Ltd.]]
+socks5://175.182.175.106:30000 [[家宽] 中国 台湾 台北市 [New Century InfoComm Tech. Co., Ltd.]]
 socks5://185.139.228.219:9055 [[机房] 荷兰 北荷兰省 阿姆斯特丹 — DigitalOcean [DigitalOcean, LLC]]
 socks5://104.251.236.203:1234 [[机房] 中国 香港 香港 [INFINITE NETWORK LLC]]
 socks5://51.81.222.200:10808 [[家宽] 中国 香港 香港 [Hong Kong Telecommunications (HKT) Limited Mass Internet]]
@@ -29,5 +31,3 @@ socks5://192.166.82.2:20001 [[家宽] 阿根廷 布宜诺斯艾利斯 [Telecentr
 socks5://192.166.82.58:20001 [[家宽] 沙特阿拉伯 利雅得省 利雅德 [RYD 5G]]
 socks5://192.166.82.112:20001 [[机房] 土耳其 布尔萨省 布尔萨 [Tellcom Fiber Static]]
 socks5://154.64.230.253:19999 [[机房] 美国 加州 洛杉矶 [NetLab Global]]
-socks5://54.191.174.166:19530 [[机房] 美国 俄勒冈州 波特兰 — 亚马逊云 Aws [Amazon.com, Inc.]]
-socks5://144.24.51.233:5555 [[机房] 美国 亚利桑那州 凤凰城 — 甲骨文云 Oracle [Oracle Svenska AB]]
