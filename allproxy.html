@@ -256,7 +256,7 @@
         </div>
         
         <div class="proxy-table">
-            <table id="proxyTable">
+            <table>
                 <thead>
                     <tr>
                         <th>协议</th>
@@ -266,14 +266,219 @@
                         <th>操作</th>
                     </tr>
                 </thead>
-                <tbody id="proxyTableBody">
-                    <!-- 代理数据将通过JavaScript动态加载 -->
+                <tbody>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">94.182.103.182</td>
+                        <td class="port">3456 [[机房] 德国 萨克森州 法尔肯施泰因 — Hetzner</td>
+                        <td class="location">Hetzner Online GmbH]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://94.182.103.182:3456 [[机房] 德国 萨克森州 法尔肯施泰因 — Hetzner [Hetzner Online GmbH]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">91.103.122.182</td>
+                        <td class="port">10808 [[机房] 中国 香港 香港</td>
+                        <td class="location">HK AliceNetwork]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://91.103.122.182:10808 [[机房] 中国 香港 香港 [HK AliceNetwork]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">79.141.79.165</td>
+                        <td class="port">1080 [[机房] 俄罗斯 新西伯利亚州 新西伯利亚</td>
+                        <td class="location">Selectel Network]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://79.141.79.165:1080 [[机房] 俄罗斯 新西伯利亚州 新西伯利亚 [Selectel Network]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">77.51.222.97</td>
+                        <td class="port">10808 [[机房] 美国 纽约州 纽约</td>
+                        <td class="location">HOSTKEY]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://77.51.222.97:10808 [[机房] 美国 纽约州 纽约 [HOSTKEY]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">52.76.141.200</td>
+                        <td class="port">1080 [[机房] 新加坡 新加坡 新加坡 — 亚马逊云 Aws</td>
+                        <td class="location">Amazon Technologies Inc.]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://52.76.141.200:1080 [[机房] 新加坡 新加坡 新加坡 — 亚马逊云 Aws [Amazon Technologies Inc.]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">51.81.222.200</td>
+                        <td class="port">10808 [[家宽] 中国 香港 香港</td>
+                        <td class="location">Hong Kong Telecommunications (HKT) Limited Mass Internet]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://51.81.222.200:10808 [[家宽] 中国 香港 香港 [Hong Kong Telecommunications (HKT) Limited Mass Internet]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">51.250.51.242</td>
+                        <td class="port">10808 [[机房] 荷兰 北荷兰省 阿姆斯特丹</td>
+                        <td class="location">SERVERS TECH FZCO]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://51.250.51.242:10808 [[机房] 荷兰 北荷兰省 阿姆斯特丹 [SERVERS TECH FZCO]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">45.120.178.66</td>
+                        <td class="port">8080 [[机房] 荷兰 弗莱福兰省 莱利斯塔德</td>
+                        <td class="location">WorkTitans B.V.]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://45.120.178.66:8080 [[机房] 荷兰 弗莱福兰省 莱利斯塔德 [WorkTitans B.V.]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">43.230.192.88</td>
+                        <td class="port">1080 [[机房] 柬埔寨 金边 金边</td>
+                        <td class="location">Cogetel Ltd, Online ISP, Cambodia]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://43.230.192.88:1080 [[机房] 柬埔寨 金边 金边 [Cogetel Ltd, Online ISP, Cambodia]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">185.241.43.247</td>
+                        <td class="port">30000 [[机房] 中国 香港 香港</td>
+                        <td class="location">BAGE CLOUD LLC]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://185.241.43.247:30000 [[机房] 中国 香港 香港 [BAGE CLOUD LLC]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">185.204.53.193</td>
+                        <td class="port">8080 [[机房] 保加利亚 索非亚首都区 索菲亚</td>
+                        <td class="location">Hosting Provider EuroHoster Ltd.]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://185.204.53.193:8080 [[机房] 保加利亚 索非亚首都区 索菲亚 [Hosting Provider EuroHoster Ltd.]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">185.159.128.217</td>
+                        <td class="port">8080 [[机房] 荷兰 北荷兰省 阿姆斯特丹</td>
+                        <td class="location">ZTV CORP LLC]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://185.159.128.217:8080 [[机房] 荷兰 北荷兰省 阿姆斯特丹 [ZTV CORP LLC]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">185.139.228.219</td>
+                        <td class="port">9055 [[机房] 荷兰 北荷兰省 阿姆斯特丹 — DigitalOcean</td>
+                        <td class="location">DigitalOcean, LLC]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://185.139.228.219:9055 [[机房] 荷兰 北荷兰省 阿姆斯特丹 — DigitalOcean [DigitalOcean, LLC]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">185.123.53.225</td>
+                        <td class="port">30000 [[家宽] 西班牙 巴利亚里群岛</td>
+                        <td class="location">PROPHASE ELECTRONICS S.L. - CLIENTES]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://185.123.53.225:30000 [[家宽] 西班牙 巴利亚里群岛 [PROPHASE ELECTRONICS S.L. - CLIENTES]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">185.105.90.184</td>
+                        <td class="port">12304 [[机房] 俄罗斯 莫斯科 莫斯科</td>
+                        <td class="location">FIRST SERVER LIMITED]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://185.105.90.184:12304 [[机房] 俄罗斯 莫斯科 莫斯科 [FIRST SERVER LIMITED]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">176.215.11.52</td>
+                        <td class="port">80 [[机房] 俄罗斯 斯维尔德洛夫斯克州 叶卡捷琳堡</td>
+                        <td class="location">JSC "ER-Telecom Holding" Yekaterinburg Branch]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://176.215.11.52:80 [[机房] 俄罗斯 斯维尔德洛夫斯克州 叶卡捷琳堡 [JSC "ER-Telecom Holding" Yekaterinburg Branch]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">175.182.175.106</td>
+                        <td class="port">30000 [[家宽] 中国 台湾 台北市</td>
+                        <td class="location">New Century InfoComm Tech. Co., Ltd.]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://175.182.175.106:30000 [[家宽] 中国 台湾 台北市 [New Century InfoComm Tech. Co., Ltd.]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">174.138.120.54</td>
+                        <td class="port">1080 [[机房] 印度 卡纳塔克邦 — DigitalOcean</td>
+                        <td class="location">DigitalOcean, LLC]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://174.138.120.54:1080 [[机房] 印度 卡纳塔克邦 — DigitalOcean [DigitalOcean, LLC]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">168.253.92.93</td>
+                        <td class="port">10808 [[机房] 南非 豪登省 约翰内斯堡</td>
+                        <td class="location">CMV]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://168.253.92.93:10808 [[机房] 南非 豪登省 约翰内斯堡 [CMV]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">167.99.192.159</td>
+                        <td class="port">10808 [[机房] 英国 英格兰 伦敦</td>
+                        <td class="location">GLOBAL CONNECTIVITY SOLUTIONS LLP]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://167.99.192.159:10808 [[机房] 英国 英格兰 伦敦 [GLOBAL CONNECTIVITY SOLUTIONS LLP]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">156.238.254.61</td>
+                        <td class="port">1080 [[机房] 美国 加州 洛杉矶</td>
+                        <td class="location">High Family Technology Co., Limited]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://156.238.254.61:1080 [[机房] 美国 加州 洛杉矶 [High Family Technology Co., Limited]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">151.243.213.105</td>
+                        <td class="port">10808 [[机房] 美国 加州 洛杉矶</td>
+                        <td class="location">Multacom Corporation]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://151.243.213.105:10808 [[机房] 美国 加州 洛杉矶 [Multacom Corporation]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">144.172.113.71</td>
+                        <td class="port">9055 [[机房] 保加利亚 索非亚首都区 索菲亚</td>
+                        <td class="location">MAXKO d.o.o.]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://144.172.113.71:9055 [[机房] 保加利亚 索非亚首都区 索菲亚 [MAXKO d.o.o.]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">14.233.135.96</td>
+                        <td class="port">1080 [[机房] 越南</td>
+                        <td class="location">Vietnam Posts and Telecommunications Group]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://14.233.135.96:1080 [[机房] 越南 [Vietnam Posts and Telecommunications Group]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">138.124.59.107</td>
+                        <td class="port">10808 [[机房] 芬兰 新地区 赫尔辛基 — Cloudflare CDN 节点</td>
+                        <td class="location">CLOUDFLAREWARP]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://138.124.59.107:10808 [[机房] 芬兰 新地区 赫尔辛基 — Cloudflare CDN 节点 [CLOUDFLAREWARP]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">138.124.31.209</td>
+                        <td class="port">10808 [[机房] 法国 法兰西岛大区 巴黎</td>
+                        <td class="location">Baykov Ilya Sergeevich]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://138.124.31.209:10808 [[机房] 法国 法兰西岛大区 巴黎 [Baykov Ilya Sergeevich]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">134.209.152.138</td>
+                        <td class="port">1080 [[机房] 印度 卡纳塔克邦 — DigitalOcean</td>
+                        <td class="location">DigitalOcean, LLC]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://134.209.152.138:1080 [[机房] 印度 卡纳塔克邦 — DigitalOcean [DigitalOcean, LLC]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">128.0.134.217</td>
+                        <td class="port">10808 [[机房] 荷兰 弗莱福兰省 莱利斯塔德</td>
+                        <td class="location">THEHOSTING]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://128.0.134.217:10808 [[机房] 荷兰 弗莱福兰省 莱利斯塔德 [THEHOSTING]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">128.0.134.217</td>
+                        <td class="port">1080 [[家宽] 俄罗斯 莫斯科 莫斯科</td>
+                        <td class="location">T2 Russia IP Network (MSK)]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://128.0.134.217:1080 [[家宽] 俄罗斯 莫斯科 莫斯科 [T2 Russia IP Network (MSK)]]')">复制</button></td>
+                    </tr>
+                    <tr>
+                        <td class="protocol">socks5</td>
+                        <td class="ip">104.251.236.203</td>
+                        <td class="port">1234 [[机房] 中国 香港 香港</td>
+                        <td class="location">INFINITE NETWORK LLC]</td>
+                        <td><button class="copy-btn" onclick="copyProxy(this, 'socks5://104.251.236.203:1234 [[机房] 中国 香港 香港 [INFINITE NETWORK LLC]]')">复制</button></td>
+                    </tr>
                 </tbody>
             </table>
-        </div>
-        
-        <div class="pagination" id="pagination">
-            <!-- 分页控件将通过JavaScript动态生成 -->
         </div>
         
         <div id="copy-notification">已复制到剪贴板！</div>
@@ -282,173 +487,6 @@
     </div>
     
     <script>
-        // 所有代理数据（最新的在前）
-        const allProxies = [
-            "socks5://94.182.103.182:3456 [[机房] 德国 萨克森州 法尔肯施泰因 — Hetzner [Hetzner Online GmbH]]",
-            "socks5://91.103.122.182:10808 [[机房] 中国 香港 香港 [HK AliceNetwork]]",
-            "socks5://79.141.79.165:1080 [[机房] 俄罗斯 新西伯利亚州 新西伯利亚 [Selectel Network]]",
-            "socks5://77.51.222.97:10808 [[机房] 美国 纽约州 纽约 [HOSTKEY]]",
-            "socks5://52.76.141.200:1080 [[机房] 新加坡 新加坡 新加坡 — 亚马逊云 Aws [Amazon Technologies Inc.]]",
-            "socks5://51.81.222.200:10808 [[家宽] 中国 香港 香港 [Hong Kong Telecommunications (HKT) Limited Mass Internet]]",
-            "socks5://51.250.51.242:10808 [[机房] 荷兰 北荷兰省 阿姆斯特丹 [SERVERS TECH FZCO]]",
-            "socks5://45.120.178.66:8080 [[机房] 荷兰 弗莱福兰省 莱利斯塔德 [WorkTitans B.V.]]",
-            "socks5://43.230.192.88:1080 [[机房] 柬埔寨 金边 金边 [Cogetel Ltd, Online ISP, Cambodia]]",
-            "socks5://185.241.43.247:30000 [[机房] 中国 香港 香港 [BAGE CLOUD LLC]]",
-            "socks5://185.204.53.193:8080 [[机房] 保加利亚 索非亚首都区 索菲亚 [Hosting Provider EuroHoster Ltd.]]",
-            "socks5://185.159.128.217:8080 [[机房] 荷兰 北荷兰省 阿姆斯特丹 [ZTV CORP LLC]]",
-            "socks5://185.139.228.219:9055 [[机房] 荷兰 北荷兰省 阿姆斯特丹 — DigitalOcean [DigitalOcean, LLC]]",
-            "socks5://185.123.53.225:30000 [[家宽] 西班牙 巴利亚里群岛 [PROPHASE ELECTRONICS S.L. - CLIENTES]]",
-            "socks5://185.105.90.184:12304 [[机房] 俄罗斯 莫斯科 莫斯科 [FIRST SERVER LIMITED]]",
-            "socks5://176.215.11.52:80 [[机房] 俄罗斯 斯维尔德洛夫斯克州 叶卡捷琳堡 [JSC \\"ER-Telecom Holding\\" Yekaterinburg Branch]]",
-            "socks5://175.182.175.106:30000 [[家宽] 中国 台湾 台北市 [New Century InfoComm Tech. Co., Ltd.]]",
-            "socks5://174.138.120.54:1080 [[机房] 印度 卡纳塔克邦 — DigitalOcean [DigitalOcean, LLC]]",
-            "socks5://168.253.92.93:10808 [[机房] 南非 豪登省 约翰内斯堡 [CMV]]",
-            "socks5://167.99.192.159:10808 [[机房] 英国 英格兰 伦敦 [GLOBAL CONNECTIVITY SOLUTIONS LLP]]",
-            "socks5://156.238.254.61:1080 [[机房] 美国 加州 洛杉矶 [High Family Technology Co., Limited]]",
-            "socks5://151.243.213.105:10808 [[机房] 美国 加州 洛杉矶 [Multacom Corporation]]",
-            "socks5://144.172.113.71:9055 [[机房] 保加利亚 索非亚首都区 索菲亚 [MAXKO d.o.o.]]",
-            "socks5://14.233.135.96:1080 [[机房] 越南 [Vietnam Posts and Telecommunications Group]]",
-            "socks5://138.124.59.107:10808 [[机房] 芬兰 新地区 赫尔辛基 — Cloudflare CDN 节点 [CLOUDFLAREWARP]]",
-            "socks5://138.124.31.209:10808 [[机房] 法国 法兰西岛大区 巴黎 [Baykov Ilya Sergeevich]]",
-            "socks5://134.209.152.138:1080 [[机房] 印度 卡纳塔克邦 — DigitalOcean [DigitalOcean, LLC]]",
-            "socks5://128.0.134.217:10808 [[机房] 荷兰 弗莱福兰省 莱利斯塔德 [THEHOSTING]]",
-            "socks5://128.0.134.217:1080 [[家宽] 俄罗斯 莫斯科 莫斯科 [T2 Russia IP Network (MSK)]]",
-            "socks5://104.251.236.203:1234 [[机房] 中国 香港 香港 [INFINITE NETWORK LLC]]",
-        ];
-        
-        // 每页显示的代理数量
-        const proxiesPerPage = 10;
-        // 当前页码（从0开始）
-        let currentPage = 0;
-        
-        // 解析代理信息
-        function parseProxy(proxyLine) {
-            try {
-                // 格式: protocol://ip:port [location]
-                // 首先分离协议部分
-                const protocolEndIndex = proxyLine.indexOf('://');
-                if (protocolEndIndex === -1) {
-                    // 处理格式不正确的行
-                    return { protocol: "", ip: proxyLine, port: "", location: "" };
-                }
-                
-                const protocol = proxyLine.substring(0, protocolEndIndex);
-                const rest = proxyLine.substring(protocolEndIndex + 3); // 跳过 "://"
-                
-                // 查找位置信息（在方括号中）
-                const locationStartIndex = rest.lastIndexOf(' [');
-                const locationEndIndex = rest.lastIndexOf(']');
-                
-                let ipPortPart, location;
-                if (locationStartIndex !== -1 && locationEndIndex !== -1 && locationEndIndex > locationStartIndex) {
-                    // 提取位置信息
-                    ipPortPart = rest.substring(0, locationStartIndex);
-                    location = rest.substring(locationStartIndex + 2, locationEndIndex); // 跳过 " ["
-                } else {
-                    // 没有位置信息
-                    ipPortPart = rest;
-                    location = "未知";
-                }
-                
-                // 分离IP和端口
-                const lastColonIndex = ipPortPart.lastIndexOf(':');
-                if (lastColonIndex > 0) {
-                    const ip = ipPortPart.substring(0, lastColonIndex);
-                    const port = ipPortPart.substring(lastColonIndex + 1);
-                    return { protocol: protocol, ip: ip, port: port, location: location };
-                } else {
-                    // 没有端口
-                    return { protocol: protocol, ip: ipPortPart, port: "未知", location: location };
-                }
-            } catch (e) {
-                // 处理解析错误
-                console.error("解析代理信息错误:", e, "代理行:", proxyLine);
-                return { protocol: "", ip: proxyLine, port: "", location: "" };
-            }
-        }
-        
-        // 渲染表格数据
-        function renderTable() {
-            const tbody = document.getElementById('proxyTableBody');
-            tbody.innerHTML = '';
-            
-            const startIndex = currentPage * proxiesPerPage;
-            const endIndex = Math.min(startIndex + proxiesPerPage, allProxies.length);
-            const pageProxies = allProxies.slice(startIndex, endIndex);
-            
-            pageProxies.forEach(proxyLine => {
-                const proxy = parseProxy(proxyLine);
-                const locationStyle = proxy.location.includes('家宽') ? ' style="color: green; font-weight: bold;"' : '';
-                
-                const row = document.createElement('tr');
-                // 转义单引号和双引号以避免JavaScript错误
-                const escapedProxyLine = proxyLine.replace(/'/g, "\\'").replace(/"/g, "&quot;");
-                row.innerHTML = '<td class="protocol">' + proxy.protocol + '</td><td class="ip">' + proxy.ip + '</td><td class="port">' + proxy.port + '</td><td class="location"' + locationStyle + '>' + proxy.location + '</td><td><button class="copy-btn" onclick="copyProxy(this, \'' + escapedProxyLine + '\')">复制</button></td>';
-                tbody.appendChild(row);
-            });
-        }
-        
-        // 渲染分页控件
-        function renderPagination() {
-            const pagination = document.getElementById('pagination');
-            pagination.innerHTML = '';
-            
-            const totalPages = Math.ceil(allProxies.length / proxiesPerPage);
-            
-            // 上一页按钮
-            const prevButton = document.createElement('button');
-            prevButton.textContent = '上一页';
-            prevButton.disabled = currentPage === 0;
-            prevButton.addEventListener('click', () => {
-                if (currentPage > 0) {
-                    currentPage--;
-                    updatePage();
-                }
-            });
-            pagination.appendChild(prevButton);
-            
-            // 页码信息
-            const pageInfo = document.createElement('div');
-            pageInfo.className = 'page-info';
-            pageInfo.textContent = '第 ' + (currentPage + 1) + ' 页，共 ' + totalPages + ' 页';
-            pagination.appendChild(pageInfo);
-            
-            // 下一页按钮
-            const nextButton = document.createElement('button');
-            nextButton.textContent = '下一页';
-            nextButton.disabled = currentPage >= totalPages - 1;
-            nextButton.addEventListener('click', () => {
-                if (currentPage < totalPages - 1) {
-                    currentPage++;
-                    updatePage();
-                }
-            });
-            pagination.appendChild(nextButton);
-            
-            // 页码按钮（最多显示10个页码）
-            const startPage = Math.max(0, Math.min(currentPage - 5, totalPages - 10));
-            const endPage = Math.min(totalPages, startPage + 10);
-            
-            for (let i = startPage; i < endPage; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i + 1;
-                if (i === currentPage) {
-                    pageButton.classList.add('active');
-                }
-                pageButton.addEventListener('click', () => {
-                    currentPage = i;
-                    updatePage();
-                });
-                pagination.appendChild(pageButton);
-            }
-        }
-        
-        // 更新页面显示
-        function updatePage() {
-            renderTable();
-            renderPagination();
-        }
-        
         // 复制代理到剪贴板
         function copyProxy(button, proxy) {
             navigator.clipboard.writeText(proxy).then(function() {
@@ -473,9 +511,21 @@
             });
         }
         
-        // 页面加载完成后初始化
+        // 添加表格行的悬停效果
         document.addEventListener('DOMContentLoaded', function() {
-            updatePage();
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                    this.style.transition = 'all 0.3s ease';
+                });
+                
+                row.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                });
+            });
         });
     </script>
 </body>
