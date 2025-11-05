@@ -324,42 +324,45 @@
         // 解析代理信息
         function parseProxy(proxyLine) {
             try {
-                // 分离协议和后面的部分
-                if (proxyLine.includes('://')) {
-                    const protocolPart = proxyLine.split('://')[0];
-                    const rest = proxyLine.split('://')[1];
-                    
-                    // 分离IP端口和位置
-                    if (rest.includes(' [') && rest.endsWith(']')) {
-                        const ipPortPart = rest.split(' [')[0];
-                        const location = rest.split(' [')[1].slice(0, -1); // 去掉结尾的]
-                        
-                        // 分离IP和端口
-                        const lastColonIndex = ipPortPart.lastIndexOf(':');
-                        if (lastColonIndex > 0) {
-                            const ip = ipPortPart.substring(0, lastColonIndex);
-                            const port = ipPortPart.substring(lastColonIndex + 1);
-                            return { protocol: protocolPart, ip: ip, port: port, location: location };
-                        } else {
-                            return { protocol: protocolPart, ip: ipPortPart, port: "未知", location: location };
-                        }
-                    } else {
-                        // 分离IP和端口
-                        const lastColonIndex = rest.lastIndexOf(':');
-                        if (lastColonIndex > 0) {
-                            const ip = rest.substring(0, lastColonIndex);
-                            const port = rest.substring(lastColonIndex + 1);
-                            return { protocol: protocolPart, ip: ip, port: port, location: "未知" };
-                        } else {
-                            return { protocol: protocolPart, ip: rest, port: "未知", location: "未知" };
-                        }
-                    }
-                } else {
+                // 格式: protocol://ip:port [location]
+                // 首先分离协议部分
+                const protocolEndIndex = proxyLine.indexOf('://');
+                if (protocolEndIndex === -1) {
                     // 处理格式不正确的行
                     return { protocol: "", ip: proxyLine, port: "", location: "" };
                 }
+                
+                const protocol = proxyLine.substring(0, protocolEndIndex);
+                const rest = proxyLine.substring(protocolEndIndex + 3); // 跳过 "://"
+                
+                // 查找位置信息（在方括号中）
+                const locationStartIndex = rest.lastIndexOf(' [');
+                const locationEndIndex = rest.lastIndexOf(']');
+                
+                let ipPortPart, location;
+                if (locationStartIndex !== -1 && locationEndIndex !== -1 && locationEndIndex > locationStartIndex) {
+                    // 提取位置信息
+                    ipPortPart = rest.substring(0, locationStartIndex);
+                    location = rest.substring(locationStartIndex + 2, locationEndIndex); // 跳过 " ["
+                } else {
+                    // 没有位置信息
+                    ipPortPart = rest;
+                    location = "未知";
+                }
+                
+                // 分离IP和端口
+                const lastColonIndex = ipPortPart.lastIndexOf(':');
+                if (lastColonIndex > 0) {
+                    const ip = ipPortPart.substring(0, lastColonIndex);
+                    const port = ipPortPart.substring(lastColonIndex + 1);
+                    return { protocol: protocol, ip: ip, port: port, location: location };
+                } else {
+                    // 没有端口
+                    return { protocol: protocol, ip: ipPortPart, port: "未知", location: location };
+                }
             } catch (e) {
                 // 处理解析错误
+                console.error("解析代理信息错误:", e, "代理行:", proxyLine);
                 return { protocol: "", ip: proxyLine, port: "", location: "" };
             }
         }
