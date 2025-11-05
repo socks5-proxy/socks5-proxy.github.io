@@ -381,7 +381,9 @@
                 const locationStyle = proxy.location.includes('家宽') ? ' style="color: green; font-weight: bold;"' : '';
                 
                 const row = document.createElement('tr');
-                row.innerHTML = '<td class="protocol">' + proxy.protocol + '</td><td class="ip">' + proxy.ip + '</td><td class="port">' + proxy.port + '</td><td class="location"' + locationStyle + '>' + proxy.location + '</td><td><button class="copy-btn" onclick="copyProxy(this, \'' + proxyLine.replace(/'/g, "\\\\'") + '\')">复制</button></td>';
+                // 转义单引号以避免JavaScript错误
+                const escapedProxyLine = proxyLine.replace(/'/g, "\\'");
+                row.innerHTML = '<td class="protocol">' + proxy.protocol + '</td><td class="ip">' + proxy.ip + '</td><td class="port">' + proxy.port + '</td><td class="location"' + locationStyle + '>' + proxy.location + '</td><td><button class="copy-btn" onclick="copyProxy(this, \'' + escapedProxyLine + '\')">复制</button></td>';
                 tbody.appendChild(row);
             });
         }
