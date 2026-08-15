@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://socks5-proxy.github.io/</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/allproxy.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/01-overview.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/02-protocol.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/03-deployment.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/04-security.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/05-advanced.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://socks5-proxy.github.io/socks5/06-implementation.html</loc>
-        <lastmod>2026-08-15</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
